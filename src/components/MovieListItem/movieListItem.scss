@@ -1,0 +1,22 @@
+#add-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#left-movie-container {
+    position: absolute;
+    border: 2px solid black;
+    width: 400px;
+    left: 0;
+}
+
+#movie {
+    position: relative;
+    background-color: #64c86420;
+}
+
+#movie-title {
+    font-weight: 500;
+    font-size: large;
+}
