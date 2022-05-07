@@ -29,7 +29,7 @@ const App: React.FC = () => {
 
   return (
     <main className="App">
-      <section id="left-movie-container">
+      <section id="movie-list-container">
         <SearchBox
           search={search}
           setSearch={setSearch}
@@ -50,7 +50,7 @@ const App: React.FC = () => {
         }
       </section>
 
-      <section id="right-movie-container">
+      <section id="movie-playlist-container">
         {
           rightList.map((movie: Movie) => {
             if (!movie.title.includes(search)) {
