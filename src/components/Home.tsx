@@ -12,10 +12,10 @@ import NoImage from "../images/no_image.jpg";
 
 
 const Home: React.FC = () => {
-  const [disabled, setDisabled] = useState(false);
+  const [style, setStyle] = useState();
   const movieData = JSON.parse(localStorage.getItem('Playlist') as string) || [];
   const { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore } = useHomeFetch();
-
+  
   console.log(state);
 
   if (error) {
@@ -33,8 +33,7 @@ const Home: React.FC = () => {
     };
     movieData.push(movieDetails);
     localStorage.setItem('Playlist', JSON.stringify(movieData));
-    
-    //reload page to show disabled button
+    setStyle({} as any);
   }
 
   return (
@@ -68,7 +67,7 @@ const Home: React.FC = () => {
             />
             {
               !movieData.some((m: any) => m.movie_id === movie.id) ? (
-                <AddToPlaylist onClick={() => addToPlaylist(movie.id, movie.title, movie.poster_path, movie.release_date)}>ADD TO PLAYLIST</AddToPlaylist>
+                <AddToPlaylist style={style} onClick={() => addToPlaylist(movie.id, movie.title, movie.poster_path, movie.release_date)}>ADD TO PLAYLIST</AddToPlaylist>
               ) : (
                 <InPlaylist>In Playlist</InPlaylist>
               )

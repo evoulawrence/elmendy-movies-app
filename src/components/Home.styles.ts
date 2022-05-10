@@ -31,7 +31,6 @@ export const InPlaylist = styled.button`
   border-radius: 10px;
   background: var(--mediumGray);
   color: var(--lightGray);
-  cursor: pointer;
   margin-top: 6px;
   border-radius: 1px solid #353535;
   cursor: not-allowed;

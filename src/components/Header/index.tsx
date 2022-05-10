@@ -19,7 +19,6 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 const Header: React.FC = () => {
-  let subtitle: string;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
