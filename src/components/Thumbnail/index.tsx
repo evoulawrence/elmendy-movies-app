@@ -1,4 +1,4 @@
-import { differenceInDays, fromUnixTime } from "date-fns";
+import { convertDateToDays } from "../../helpers/helpers";
 import { Link } from "react-router-dom";
 import { Image, Info, Title, ReleaseDate } from "./Thumbnail.styles";
 
@@ -20,7 +20,7 @@ const Thumbnail: React.FC<Props> = ({ image, movieId, clickable, movieHeight, mo
             <Image src={image} alt="movie-thumb" movieHeight={movieHeight} />
             <Info>
               <Title>{movieTitle}</Title>
-              <ReleaseDate>Release date:{" "} {differenceInDays(new Date(), fromUnixTime(Math.floor(new Date(releaseDate).getTime() / 1000)))}{" "} days ago</ReleaseDate>
+              <ReleaseDate>Release date:{" "} {convertDateToDays(releaseDate)}{" "} days ago</ReleaseDate>
             </Info>
           </Link>
       ) : (

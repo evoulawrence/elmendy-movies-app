@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
+import { convertDateToDays } from "../../helpers/helpers";
 import { Wrapper, Item, Poster, Title, ReleaseDate, RemoveButton } from "./MoviePlaylist.styles";
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config/config";
-import { differenceInDays, fromUnixTime } from "date-fns";
 
 export type PlayList = {
     movie_id: number;
     movie_title: string;
     movie_poster: string;
-    movie_release_date: number;
+    movie_release_date: string;
 };
 
 const MoviePlayList: React.FC = () => {
@@ -42,7 +42,7 @@ const MoviePlayList: React.FC = () => {
                     <Item key={item.movie_id}>
                         <Poster src={`${IMAGE_BASE_URL}${POSTER_SIZE}${item.movie_poster}`} alt="movie-thumb" />
                         <Title>{item.movie_title}</Title>
-                        <ReleaseDate>Release date:{" "} {differenceInDays(new Date(), fromUnixTime(Math.floor(new Date(item.movie_release_date).getTime() / 1000)))}{" "} days ago</ReleaseDate>
+                        <ReleaseDate>Release date:{" "} {convertDateToDays(item.movie_release_date)}{" "} days ago</ReleaseDate>
                         <RemoveButton onClick={() => removeFromPlaylist(item.movie_id)}>REMOVE</RemoveButton>
                     </Item>
                 ))
