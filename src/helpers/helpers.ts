@@ -1,3 +1,5 @@
+import { differenceInDays, fromUnixTime } from "date-fns";
+
 // Convert time to hours and minutes: for future development
 export const calcTime = (time: number):string => {
   const hours: number = Math.floor(time / 60);
@@ -15,6 +17,10 @@ export const convertMoney = (money: number):string => {
   return formatValue.format(money);
 };
 
+// Convert movie release date to number of days from TODAY
+export const convertDateToDays = (releaseDate: string): string => {
+  return `${differenceInDays(new Date(), fromUnixTime(Math.floor(new Date(releaseDate).getTime() / 1000)))}`
+}
 // Session Storage
 export const isPersistedState = (stateName:string):any => {
   const sessionState = sessionStorage.getItem(stateName);
