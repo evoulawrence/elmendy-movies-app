@@ -45,3 +45,17 @@ You can use 3rd party libraries or pick any tool of your choice that might help 
 ## Submission
 
 Please open a Pull/Merge request to this repository with everything you have prepared. If used, include references for used libraries, frameworks, or code snippets. 
+
+## Data source: The Movies DB
+ I have decided to use TMDB developer api (https://developers.themoviedb.org) instead of the movie json data (movies.ts) you have provided. I did this because the api gives me better way of manipulating the data, and I also have interest in further developing the app to another level. 
+
+ ## Stack / Libraries
+ - JavaScript/TypeScript
+ - React.js
+ - Styled components
+ - React modal
+ - React router dom
+ - Sass
+
+ ## App URL
+ https://elmendy-movies.netlify.app/

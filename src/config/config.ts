@@ -1,5 +1,7 @@
 // Configuration for TMDB API
 // Developer API: https://developers.themoviedb.org/
+//I have decided to use TMDB developer api (https://developers.themoviedb.org) instead of the movie json data (movies.ts) you have provided. 
+//I did this because the api gives me better way of manipulating the data, and I also have interest in further developing the app to another level.
 
 const API_URL:string = "https://api.themoviedb.org/3/";
 const API_KEY:string | undefined = process.env.REACT_APP_API_KEY;
