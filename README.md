@@ -17,7 +17,7 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ## Data source: The Movies DB
- I have decided to use TMDB developer api (https://developers.themoviedb.org) instead of the movie json data (movies.ts) you have provided. I did this because the api gives me better way of manipulating the data, and I also have interest in further developing the app to another level. 
+ I used TMDB developer api (https://developers.themoviedb.org).
 
  ## Stack / Libraries
  - JavaScript/TypeScript
