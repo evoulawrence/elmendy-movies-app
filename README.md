@@ -24,7 +24,7 @@ You will also see any lint errors in the console.
  - React.js
  - Styled components
  - React modal
- - React router dom
+ - React router dom.
  - Sass
 
  ## App URL
